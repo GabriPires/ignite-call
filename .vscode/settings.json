@@ -4,7 +4,7 @@
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
-    "source.fixAll": true,
+    "source.fixAll": false,
     "source.organizeImports": true
   },
   "[javascript]": {
