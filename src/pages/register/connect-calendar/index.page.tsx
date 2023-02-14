@@ -6,6 +6,7 @@ import { ConnectBox, ConnectItem } from './styles'
 
 const Register = () => {
   // const router = useRouter()
+  // const session = useSession()
 
   return (
     <Container>
@@ -30,6 +31,7 @@ const Register = () => {
             Conectar <ArrowRight />
           </Button>
         </ConnectItem>
+
         <Button type={'submit'}>
           Próximo passo <ArrowRight />
         </Button>
