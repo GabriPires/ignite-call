@@ -5,7 +5,7 @@ import { ArrowRight, Check } from 'phosphor-react'
 import { Container, Header } from '../styles'
 import { AuthError, ConnectBox, ConnectItem } from './styles'
 
-const Register = () => {
+const ConnectCallendar = () => {
   const router = useRouter()
   const session = useSession()
 
@@ -61,4 +61,4 @@ const Register = () => {
   )
 }
 
-export default Register
+export default ConnectCallendar
