@@ -26,6 +26,7 @@ export default function TimeIntervals() {
     control,
     register,
     handleSubmit,
+    watch,
     formState: { isSubmitting, errors },
   } = useForm({
     defaultValues: {
@@ -47,6 +48,8 @@ export default function TimeIntervals() {
   })
 
   const weekDays = getWeekDays()
+
+  const intervals = watch('intervals')
 
   async function handleSetTimeIntervals() {}
 
@@ -84,12 +87,14 @@ export default function TimeIntervals() {
                   size={'sm'}
                   type={'time'}
                   step={60}
+                  disabled={intervals[index].enabled === false}
                   {...register(`intervals.${index}.startTime`)}
                 />
                 <TextInput
                   size={'sm'}
                   type={'time'}
                   step={60}
+                  disabled={intervals[index].enabled === false}
                   {...register(`intervals.${index}.endTime`)}
                 />
               </IntervalInputs>
