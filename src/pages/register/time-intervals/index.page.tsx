@@ -8,7 +8,7 @@ import {
   TextInput,
 } from '@ignite-ui/react'
 import { ArrowRight } from 'phosphor-react'
-import { useFieldArray, useForm } from 'react-hook-form'
+import { Controller, useFieldArray, useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { Container, Header } from '../styles'
 import {
@@ -67,7 +67,16 @@ export default function TimeIntervals() {
           {fields.map((field, index) => (
             <IntervalItem key={field.id}>
               <IntervalDay>
-                <Checkbox checked={field.enabled} />
+                <Controller
+                  control={control}
+                  name={`intervals.${index}.enabled`}
+                  render={({ field: { value, onChange } }) => (
+                    <Checkbox
+                      checked={value}
+                      onCheckedChange={(checked) => onChange(checked === true)}
+                    />
+                  )}
+                />
                 <Text>{weekDays[field.weekDay]}</Text>
               </IntervalDay>
               <IntervalInputs>
