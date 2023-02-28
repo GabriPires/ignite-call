@@ -4,6 +4,7 @@ import {
   CalendarActions,
   CalendarBody,
   CalendarContainer,
+  CalendarDay,
   CalendarHeader,
   CalendarTitle,
 } from './styles'
@@ -40,9 +41,15 @@ export const Calendar = () => {
             <td></td>
             <td></td>
             <td></td>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
+            <td>
+              <CalendarDay disabled>1</CalendarDay>
+            </td>
+            <td>
+              <CalendarDay>2</CalendarDay>
+            </td>
+            <td>
+              <CalendarDay>3</CalendarDay>
+            </td>
           </tr>
         </tbody>
       </CalendarBody>
