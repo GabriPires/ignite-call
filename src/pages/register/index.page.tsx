@@ -43,8 +43,6 @@ const Register = () => {
   }, [router.query.username, setValue])
 
   const handleRegister = async (data: RegisterFormData) => {
-    console.log(data)
-
     try {
       await api.post('/users', {
         name: data.name,
@@ -55,10 +53,7 @@ const Register = () => {
     } catch (error) {
       if (error instanceof AxiosError && error?.response?.data?.message) {
         alert(error.response.data.message)
-        return
       }
-
-      console.log(error)
     }
   }
 

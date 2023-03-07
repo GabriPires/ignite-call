@@ -38,7 +38,6 @@ const UpdateProfile = () => {
   const router = useRouter()
 
   const handleUpdateProfile = async (data: UpdateProfileFormData) => {
-    console.log(data)
     await api.put('/users/profile', {
       bio: data.bio,
     })
